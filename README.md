@@ -1,4 +1,7 @@
 # GemUpdateChecker
+[![Build Status](https://travis-ci.org/henteko/gem_update_checker.svg?branch=master)](https://travis-ci.org/henteko/gem_update_checker)
+[![Gem Version](https://badge.fury.io/rb/gem_update_checker.svg)](https://badge.fury.io/rb/gem_update_checker)
+
 This gem is gem update check.
 
 
