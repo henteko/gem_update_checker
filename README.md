@@ -1,8 +1,6 @@
 # GemUpdateChecker
+This gem is gem update check.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/gem_update_checker`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
@@ -22,15 +20,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'gem_update_checker'
 
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake false` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+gem_name = 'your_gem_name'
+current_version = '0.0.1'
+if GemUpdateChecker.update_available?(gem_name, current_version)
+  puts "update available"
+  puts "please run gem update #{gem_name}"
+end
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/gem_update_checker.
+Bug reports and pull requests are welcome on GitHub at https://github.com/henteko/gem_update_checker.
 
+## License
+MIT
