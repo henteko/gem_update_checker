@@ -28,8 +28,10 @@ require 'gem_update_checker'
 
 gem_name = 'your_gem_name'
 current_version = '0.0.1'
-if GemUpdateChecker.update_available?(gem_name, current_version)
-  puts "update available"
+checker = GemUpdateChecker::Client.new(gem_name, current_version)
+
+if checker.update_available
+  puts "#{gem_name} #{checker.latest_version} is available"
   puts "please run gem update #{gem_name}"
 end
 ```
